@@ -30,6 +30,8 @@ Adding more checkpoints will clear everyone's personal best for the whole course
 
 To start the speedrun, run `/function speedrun:start_run` in chat. You cannot start if you have the checkpoint tool in your inventory. This will instantly teleport you to the starting checkpoint, clear your inventory and put you into adventure mode with saturation.
 
+You can stop the run by typing `/function speedrun:stop`.
+
 You can reset mid-run by typing `/function speedrun:reset`.
 
 There are currently no tools that allow non server-operators to reset players who are currently running, or tools that allow them to start the run, so these must be set up independently for the time being, as this is just being released for those who want to use it.
