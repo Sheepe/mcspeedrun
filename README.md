@@ -4,13 +4,15 @@ Multiplayer compatible.
 
 Allows you to create checkpoints in whatever configuration with a customized name.
 
-Upon starting the speedrun, it will teleport you to the initial checkpoint and will keep your best times between each checkpoint after that, so you know how much you improve*.
+Upon starting the speedrun, it will teleport you to the initial checkpoint and will keep your best times between each checkpoint after that, so you know how much you improve.
 
-* This will only display when the whole run is completed at least once.
+**This will only display when the whole run is completed at least once.**
 
 Times will be shown in different colours depending on how well you did, it attempts to follow the general format for speedrunning.
 
 If you fall into the void (below y = 0), it will teleport you back to your last checkpoint.
+
+More tools will be added at a later date as well as a better interface, this is mostly a beta datapack but it's completely usable and should have little to no bugs (depending on how violently you use it).
 
 # Installation
 
