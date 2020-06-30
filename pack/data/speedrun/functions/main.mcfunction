@@ -9,17 +9,17 @@ execute if entity @a[tag=runner,tag=active] run clear @a minecraft:carrot_on_a_s
 execute unless entity @a[tag=runner,tag=active] as @a if score @s shp_click matches 1.. at @s[nbt={SelectedItem:{id:"minecraft:carrot_on_a_stick",tag:{ItemId:0b}}}] run function speedrun:tools/new/split
 execute unless entity @a[tag=runner,tag=active] as @a if score @s shp_click matches 1.. at @s[nbt={SelectedItem:{id:"minecraft:carrot_on_a_stick",tag:{ItemId:1b}}}] run function speedrun:tools/delete/split
 
-execute as @a[tag=runner,tag=active] run scoreboard players add @s shp_global_time 1
-execute as @a[tag=runner,tag=active] run scoreboard players add @s shp_split_time 1
+execute as @a[tag=runner,tag=active,gamemode=adventure] run scoreboard players add @s shp_global_time 1
+execute as @a[tag=runner,tag=active,gamemode=adventure] run scoreboard players add @s shp_split_time 1
 
-execute as @a[tag=runner,tag=active] run function speedrun:actionbar
+execute as @a[tag=runner,tag=active,gamemode=adventure] run function speedrun:actionbar
 
-execute as @a[tag=runner,tag=active] at @s run function speedrun:split_check
+execute as @a[tag=runner,tag=active,gamemode=adventure] at @s run function speedrun:split_check
 execute as @a[tag=runner,tag=practice] at @s run function speedrun:tools/practice/split_check
 
 execute as @a[tag=runner] run function speedrun:checkpoint
 
-execute if score invisibility_mode shp_data matches 1 as @a[tag=runner,gamemode=adventure] at @s if entity @a[tag=runner,distance=0.1..5] run effect give @s minecraft:invisibility 1 255 true
+execute if score invisibility_mode shp_data matches 1 as @a[tag=runner,gamemode=adventure] at @s if entity @a[tag=runner,distance=0.1..5,gamemode=adventure] run effect give @s minecraft:invisibility 1 255 true
 execute if score invisibility_mode shp_data matches 2 as @a[tag=runner,gamemode=adventure] run effect give @s minecraft:invisibility 1 255 true
 
 function speedrun:tools/triggers/check
