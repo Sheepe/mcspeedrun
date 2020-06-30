@@ -8,4 +8,4 @@ forceload add ~ ~
 
 tp @e[type=minecraft:armor_stand,tag=shp_lobby_spawn] @s
 
-execute as @a run function speedrun:tools/book
+execute as @a[gamemode=adventure] run function speedrun:tools/book
