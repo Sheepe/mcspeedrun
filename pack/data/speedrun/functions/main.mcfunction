@@ -2,6 +2,8 @@
 
 function speedrun:tool_check
 
+execute if entity @e[type=minecraft:armor_stand,tag=shp_lobby_spawn] as @a[tag=!active,tag=!practice] run effect give @s minecraft:saturation 1000000 255 true
+
 execute if entity @a[tag=runner,tag=active] run clear @a minecraft:writable_book{SplitItem:1b}
 execute if entity @a[tag=runner,tag=active] run clear @a minecraft:written_book{SplitItem:1b}
 execute if entity @a[tag=runner,tag=active] run clear @a minecraft:carrot_on_a_stick{SplitItem:1b}
@@ -17,7 +19,7 @@ execute as @a[tag=runner,tag=active,gamemode=adventure] run function speedrun:ac
 execute as @a[tag=runner,tag=active,gamemode=adventure] at @s run function speedrun:split_check
 execute as @a[tag=runner,tag=practice] at @s run function speedrun:tools/practice/split_check
 
-execute as @a[tag=runner] run function speedrun:checkpoint
+execute as @a run function speedrun:checkpoint
 
 execute if score invisibility_mode shp_data matches 1 as @a[tag=runner,gamemode=adventure] at @s if entity @a[tag=runner,distance=0.1..5,gamemode=adventure] run effect give @s minecraft:invisibility 1 255 true
 execute if score invisibility_mode shp_data matches 2 as @a[tag=runner,gamemode=adventure] run effect give @s minecraft:invisibility 1 255 true

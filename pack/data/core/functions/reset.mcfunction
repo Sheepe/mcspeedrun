@@ -2,6 +2,7 @@
 
 scoreboard players reset * shp_player_id
 scoreboard players set γcurrent shp_player_id 0
+data modify storage shp_speedrun_records data set value []
 function core:init
 function speedrun:tools/clear/splits
 function player:assign_ids
@@ -18,5 +19,6 @@ tag @a remove active
 title @a subtitle ""
 title @a actionbar ""
 title @a title ""
-function speedrun:data/clear
+#function speedrun:data/clear
 function core:remove_lobby
+function speedrun:leaderboard/remove
