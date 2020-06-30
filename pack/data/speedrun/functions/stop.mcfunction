@@ -2,6 +2,7 @@
 
 tag @s remove active
 tag @s remove runner
+tag @s remove practice
 
 effect clear @s saturation
 

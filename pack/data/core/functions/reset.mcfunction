@@ -19,3 +19,4 @@ title @a subtitle ""
 title @a actionbar ""
 title @a title ""
 function speedrun:data/clear
+function core:remove_lobby
