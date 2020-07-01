@@ -41,3 +41,9 @@ Note that the setting only effects people in adventure mode.
 To clear all checkpoints (and so all data stored), run `/function core:reset`.
 
 You can set up a leaderboard of the best times by going to where you'd like the board to be and running `/function speedrun:leaderboard/spawn`. If you'd like to move it, you just run the same function again in the new location. If you want to remove it altogether, simply run `/function speedrun:leaderboard/remove`
+
+# Technical Details
+
+All chunks containing checkpoints and the lobby spawn are forceloaded, this is to ensure that they are removed/added whenever needed. Such chunks are unforceloaded as soon as they are removed by the system. Removing them manually will not do this.
+
+Unforceload the chunks at your own risk, strange behaviour can emerge.
