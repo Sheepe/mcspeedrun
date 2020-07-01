@@ -1,7 +1,6 @@
 # Author: SirSheepe
 
 execute at @s run loot spawn ~ -100 ~ loot speedrun:get_name
-execute at @s positioned ~ -100 ~ as @e[type=item,sort=nearest,limit=1] run tellraw @a {"nbt":"Item.tag.SkullOwner.Name","entity":"@s"}
 execute at @s positioned ~ -100 ~ run data modify storage minecraft:shp_speedrun_records temp set value {pb:2147483647.0d,splits:[]}
 execute at @s positioned ~ -100 ~ run data modify storage minecraft:shp_speedrun_records temp.name set from entity @e[type=item,sort=nearest,limit=1] Item.tag.SkullOwner.Name
 data modify storage minecraft:shp_speedrun_records data append from storage minecraft:shp_speedrun_records temp

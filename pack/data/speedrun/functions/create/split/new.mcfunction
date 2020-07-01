@@ -7,6 +7,7 @@ title @s title ""
 
 playsound minecraft:block.note_block.bell master @s ~ ~ ~ 100 1.2
 
+forceload add ~ ~
 summon minecraft:armor_stand ~ ~1 ~ {Tags:["split"],Invisible:1b,Marker:1b,CustomNameVisible:1b}
 
 execute if score γcurrent shp_split_id matches 1.. run function speedrun:data/add_null_split
