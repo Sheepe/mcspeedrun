@@ -40,6 +40,8 @@ Note that the setting only effects people in adventure mode.
 
 To clear all checkpoints (and so all data stored), run `/function core:reset`.
 
+To just clear everyone's times, you can run `/function speedrun:data/clear`
+
 You can set up a leaderboard of the best times by going to where you'd like the board to be and running `/function speedrun:leaderboard/spawn`. If you'd like to move it, you just run the same function again in the new location. If you want to remove it altogether, simply run `/function speedrun:leaderboard/remove`
 
 # Technical Details
